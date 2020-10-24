@@ -1,7 +1,7 @@
 # Ajiranet graph path
 
 ## Technologies used
-Java 8
+Java 8, 
 Servlet
 
 
@@ -34,11 +34,13 @@ is added to display type, name, strength and adjacent devices of each device.  T
 
 ## Design
 
+Gateway.java is the api controller.
+
 A Graph object is defined as singleton.  It holds all the nodes and connections.  Operations are performed over this object.
 
 Json parsing class does all input data parsing.
 
-Then the service class does semantic analysis of parsed input.  Invokes appropriate modules.
+The service class does semantic analysis of parsed input.  Invokes appropriate modules.
 
 As per the problem statement, afaik, path between devices is expected.  No explicit requirement for shortest path.  However, in the test spec, from=A4&to=A3 expects shortest path.  So, implemented shortest path logic.
 
